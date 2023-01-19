@@ -1,0 +1,21 @@
+[package]
+name = "btf-tracepoint-example"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+aya = { git = "https://github.com/joshuataylor/aya", branch = "feature/enum64", features=["async_tokio"] }
+aya-log = { git = "https://github.com/joshuataylor/aya", branch = "feature/enum64" }
+
+btf-tracepoint-example-common = { path = "../btf-tracepoint-example-common", features=["user"] }
+anyhow = "1.0.42"
+clap = { version = "4.0", features = ["derive"] }
+env_logger = "0.10"
+log = "0.4"
+tokio = { version = "1.23", features = ["macros", "rt", "rt-multi-thread", "net", "signal"] }
+bytes = "1"
+
+[[bin]]
+name = "btf-tracepoint-example"
+path = "src/main.rs"

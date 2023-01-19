@@ -1,0 +1,2 @@
+[workspace]
+members = ["btf-tracepoint-example", "btf-tracepoint-example-common", "xtask"]
